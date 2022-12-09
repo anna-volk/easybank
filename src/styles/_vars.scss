@@ -1,0 +1,26 @@
+
+//TYPOGRAPHY
+$fontSizeH1: clamp(2.50rem, calc(2.15rem + 1.50vw), 3.50rem);
+$fontSizeH2: clamp(2.00rem, calc(1.82rem + 0.75vw), 2.50rem);
+$font18: 1.125rem;
+$font16: 1rem;
+$font15: .9375rem;
+$font14: .875rem;
+$font13: .8125rem;
+$font10: .625rem;
+// COLORS
+$white: #fff;
+$whiteOff: #fafafa; //bg-hero, articles
+$greyVeryLight: #f4f5f7; //bg advantages
+
+$greenHover: #30c88f;
+$blueDark: #2d314d; //headings
+$greyLight: #9597a5; //nav+body
+$gradient: linear-gradient(135deg, #33d35e 0%, #2ab6d9 99.58%);
+
+// from style guide
+// - Dark Blue: hsl(233, 26%, 24%)
+// - Lime Green: hsl(136, 65%, 51%)
+// - Bright Cyan: hsl(192, 70%, 51%)
+
+//

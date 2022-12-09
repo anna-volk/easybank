@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    top: 0;
+    left: 48%;
+    background-position: left top -260px;
+    background-image: url("@img/hero/hero-bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    filter: drop-shadow(0px 2px 77px rgba(0, 0, 0, 0.0240111));
+    @media (max-width: 1300px) {
+      left: 52%;
+    }
+    @media (max-width: 768px) {
+      background-size: 1000px;
+      left: 55%;
+    }
+    @media (max-width: 640px) {
+      background-image: url("@img/hero/mobile/hero-bg-mobile.svg");
+      background-size: 862px;
+      top: 0;
+      left: 0;
+      background-position: bottom left -60px;
+      height: 280px;
+    }
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @media (max-width: 768px) {
+      grid-template-columns: 55% 45%;
+    }
+    @media (max-width: 640px) {
+      grid-template-columns: 100%;
+    }
+    // HERO_INFO
+    .hero-info {
+      max-width: 450px;
+      padding-top: clamp(2.5rem, calc(-0.36rem + 12.21vw), 10.63rem);
+      padding-bottom: clamp(5.5rem, calc(3.7rem + 7.7vw), 10.63rem);
+      @media (max-width: 640px) {
+        order: 2;
+        text-align: center;
+        margin: 280px auto 0;
+      }
+      h1 {
+        font-size: $fontSizeH1;
+        line-height: 114%;
+        letter-spacing: -1px;
+        @media (max-width: 500px) {
+          line-height: 118%;
+          letter-spacing: -0.714286px;
+        }
+      }
+      p {
+        font-size: $font18;
+        line-height: 156%;
+        letter-spacing: -0.28125px;
+        margin: 1.33em 0 2em;
+        @media (max-width: 500px) {
+          margin: 1.07em 0 2.13em;
+          font-size: $font15;
+          line-height: 167%;
+          letter-spacing: -0.234375px;
+        }
+      }
+      .btn {
+        @media (max-width: 500px) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+    .hero-image-wrapper {
+      position: relative;
+      // HERO_IMAGE
+      .hero-img {
+        position: absolute;
+        z-index: 10;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 120%;
+        aspect-ratio: 0.812/1;
+        max-width: 732px;
+        filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.15));
+        @media (max-width: 768px) {
+          width: 130%;
+          left: 30px;
+        }
+        @media (max-width: 640px) {
+          width: 100%;
+          max-width: 325px;
+          top: -120px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

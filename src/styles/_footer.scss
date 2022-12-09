@@ -1,0 +1,125 @@
+.footer {
+  background-color: $blueDark;
+  padding: 48px 0;
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2em;
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      justify-items: center;
+    }
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 576px) {
+      align-items: center;
+    }
+    .logo-image {
+      margin-bottom: 2em;
+      .logo-img {
+        height: 20px;
+        width: 139px;
+      }
+    }
+    .social {
+      display: flex;
+      gap: 13px;
+      @media (max-width: 768px) {
+        gap: 16px;
+      }
+      .social-item {
+        display: block;
+      }
+      .social-icon {
+        display: block;
+        width: 20px;
+        aspect-ratio: 1/1;
+        fill: $white;
+        transition: fill 0.3s;
+        @media (max-width: 768px) {
+          width: 24px;
+        }
+        &:hover {
+          fill: $greenHover;
+        }
+      }
+    }
+  }
+  .footer-nav {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 768px) {
+      order: 2;
+    }
+    @media (max-width: 576px) {
+      order: unset;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .nav-list {
+    width: 160px;
+    @media (max-width: 1200px) {
+      width: unset;
+    }
+  }
+  .nav-item {
+    @media (max-width: 576px) {
+      text-align: center;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 0.53em;
+    }
+    .nav-link {
+      text-transform: capitalize;
+      color: $white;
+      font-size: $font15;
+      line-height: 173%;
+      letter-spacing: -0.234375px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $greenHover;
+      }
+    }
+  }
+  .col-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+  .btn {
+    margin-left: auto;
+    display: block;
+    @media (max-width: 576px) {
+      margin: 0 auto;
+    }
+  }
+  .copyright {
+    margin-top: 1.5em;
+
+    font-size: $font15;
+    line-height: 173%;
+    text-align: right;
+    letter-spacing: -0.234375px;
+    color: $white;
+    opacity: 0.5;
+  }
+}

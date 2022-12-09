@@ -1,0 +1,68 @@
+.adv {
+  padding: clamp(4rem, calc(3.32rem + 2.91vw), 5.94rem) 0;
+  background-color: $greyVeryLight;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+  .adv-info {
+    max-width: 640px;
+    p {
+      margin: 0.89em 0 4em;
+      font-size: $font18;
+      line-height: 156%;
+      letter-spacing: -0.28125px;
+      @media (max-width: 768px) {
+        margin: 0.93em 0 3.7em;
+        font-size: $font15;
+        line-height: 167%;
+        letter-spacing: -0.234375px;
+      }
+    }
+  }
+  .adv-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @media (max-width: 1024px) {
+      gap: 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 576px) {
+      gap: 30px;
+      grid-template-columns: 1fr;
+    }
+    .adv-item {
+      h3 {
+        margin: 1.67em 0 1.08em;
+        font-size: 1.5rem;
+        line-height: 117%;
+        letter-spacing: -0.428571px;
+        @media (max-width: 768px) {
+          margin: 1.2em 0 0.8em;
+          font-size: 1.25rem;
+          line-height: 140%;
+          letter-spacing: -0.357143px;
+        }
+      }
+      p {
+        font-size: $font16;
+        line-height: 162%;
+        letter-spacing: -0.25px;
+        // mb - make up for height (112px/103px)??
+        margin-bottom: 9px;
+        @media (max-width: 768px) {
+          font-size: $font15;
+          line-height: 167%;
+          letter-spacing: -0.234375px;
+        }
+      }
+    }
+    .adv-img {
+      width: 72px;
+      aspect-ratio: 1/1;
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
